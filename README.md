@@ -1,4 +1,4 @@
-### Simple Terminal
+# Simple Terminal
 My build of suckless' simple terminal.
 
 The applied patches are in patches/. Feel free to remove that directory in your fork.
