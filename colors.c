@@ -1,1 +1,2 @@
-#include "/home/savar/.local/share/themes/mountain/st.colors.c"
+//#include "/home/savar/.local/share/themes/paradise/st.colors.c"
+#include "st.colors.c"
