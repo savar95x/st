@@ -1,2 +1,6 @@
-//#include "/home/savar/.local/share/themes/paradise/st.colors.c"
-#include "colorschemes/paradise.c"
+/*
+* available colorschemes:
+* paradise
+* gruvbox
+*/
+#include "colorschemes/gruvbox.c"
