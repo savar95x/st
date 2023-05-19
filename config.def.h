@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "monospace:pixelsize=17:antialias=true:autohint=true";
-static int borderpx = 50;
+static int borderpx = 30;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -98,19 +98,7 @@ unsigned int tabspaces = 8;
 float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
 #include "colors.c"
-};
-
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
