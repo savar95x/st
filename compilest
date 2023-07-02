@@ -1,2 +1,2 @@
 #!/bin/sh
-rm -f config.h st.o st x.o && make && sudo make install
+rm -f config.h st && make && sudo make install && rm -f st.o x.o
