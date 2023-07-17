@@ -6,8 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "monospace:pixelsize=16:antialias=true:autohint=true";
-static int borderpx = 42;
+static int borderpx = 30;
 //static int borderpx = 0;
+static char *openurlcmd[] = { "/bin/sh", "-c",
+	"xurls | dmenu -l 10 -w $WINDOWID | xargs -r open",
+	"externalpipe", NULL };
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -95,8 +98,11 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-//float alpha = 0.93;
-float alpha = 1.0;
+float alpha = 0.92;
+//float alpha = 1.0;
+
+/* Background opacity */
+float alpha_def;
 
 /* Terminal colors (16 first used in escape sequence) */
 #include "colors.c"
@@ -163,7 +169,7 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Up,       zoom,           {.f = +1} },
+	{ TERMMOD,              XK_Up,		zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
@@ -174,6 +180,11 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_k,           kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_j,           kscrolldown,    {.i = -1} },
 	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
+	{ TERMMOD,		XK_U,		externalpipe,	{ .v = openurlcmd } },
+	{ MODKEY,               XK_bracketleft, chgalpha,       {.f = -1} }, /* Decrease opacity */
+	{ MODKEY,		XK_bracketright,chgalpha,       {.f = +1} }, /* Increase opacity */
+	{ MODKEY|ShiftMask,     XK_braceright,	chgalpha,       {.f =  101} }, /* 1 opacity */
+	{ MODKEY|ShiftMask,     XK_braceleft,	chgalpha,       {.f =  0} }, /* Reset opacity */
 };
 
 /*

@@ -83,6 +83,7 @@ void die(const char *, ...);
 void redraw(void);
 void draw(void);
 
+void externalpipe(const Arg *);
 void kscrolldown(const Arg *);
 void kscrollup(const Arg *);
 void printscreen(const Arg *);
@@ -132,3 +133,4 @@ extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern unsigned int defaultcs;
 extern float alpha;
+extern float alpha_def;
