@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "monospace:pixelsize=16:antialias=true:autohint=true";
-static int borderpx = 30;
+static int borderpx = 40;
 //static int borderpx = 0;
 static char *openurlcmd[] = { "/bin/sh", "-c",
 	"xurls | dmenu -l 10 -w $WINDOWID | xargs -r open",
@@ -98,8 +98,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.92;
-//float alpha = 1.0;
+//float alpha = 0.98;
+float alpha = 1.0;
 
 /* Background opacity */
 float alpha_def;
