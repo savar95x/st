@@ -1,6 +1,27 @@
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#5a524c", // black
+	// 20% desaturated colors
+	"#867970", // black
+	"#d67b76", // red
+	"#a3ae6d", // green
+	"#cba364", // yellow
+	"#82a9a0", // blue
+	"#cb8e9e", // magenta
+	"#8daf87", // cyan
+	"#d7c5a7", // white
+
+	/* 8 bright colors */
+	"#867970", // black
+	"#d67b76", // red
+	"#a3ae6d", // green
+	"#cba364", // yellow
+	"#82a9a0", // blue
+	"#cb8e9e", // magenta
+	"#8daf87", // cyan
+	"#d7c5a7", // white
+
+	/* og gruv mat colors
+	"#867970", // black
 	"#ea6962", // red
 	"#a9b665", // green
 	"#d8a657", // yellow
@@ -9,15 +30,16 @@ static const char *colorname[] = {
 	"#89b482", // cyan
 	"#ddc7a1", // white
 
-	/* 8 bright colors */
-	"#5a524c", // black
-	"#ea6962", // red
-	"#a9b665", // green
-	"#d8a657", // yellow
-	"#7daea3", // blue
-	"#d3869b", // magenta
-	"#89b482", // cyan
-	"#ddc7a1", // white
+	30% desaturated colors
+	"#867970", // black
+	"#d67b76", // red
+	"#a1aa71", // green
+	"#c5a26a", // yellow
+	"#84a79f", // blue
+	"#c792a0", // magenta
+	"#8eac89", // cyan
+	"#d4c5aa", // white
+	*/
 
 	[255] = 0,
 
@@ -25,7 +47,7 @@ static const char *colorname[] = {
 	"#d4be98", // cursor
 	"#505050",
 	"#fbf1c7", /* default foreground colour */
-	"#282828"/*#1B1F20*/, /* default background colour */
+	"#202020"/*#1C2021 #1D2021 #282828*/, /* default background colour */
 };
 
 

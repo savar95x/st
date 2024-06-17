@@ -31,7 +31,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 1.3;
+static float chscale = 1.16;
 
 /*
  * word delimiter string
@@ -98,8 +98,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-//float alpha = 0.98;
-float alpha = 1.0;
+float alpha = 1;
+//float alpha = 0.97;
 
 /* Background opacity */
 float alpha_def;
@@ -117,11 +117,24 @@ float alpha_def;
 static unsigned int cursorshape = 2;
 
 /*
+ * Whether to use pixel geometry or cell geometry
+ */
+
+static Geometry geometry = CellGeometry;
+
+/*
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 70;
+static unsigned int rows = 15;
+
+/*
+ * Default width and height (including borders!)
+ */
+
+static unsigned int width = 564;
+static unsigned int height = 364;
 
 /*
  * Default colour and shape of the mouse cursor
