@@ -53,7 +53,7 @@
 #define TLINE_HIST(y)           ((y) <= HISTSIZE-term.row+2 ? term.hist[(y)] : term.line[(y-HISTSIZE+term.row-3)])
 
 #define TLINEABS(y) ( \
-	(y) < 0 ? term.hist[(term.histi + (y) + 1 + HISTSIZE) % HISTSIZE] : term.line[(y)] \
+	(y) < 0 ? term.hi
 )
 
 #define UPDATEWRAPNEXT(alt, col) do { \
