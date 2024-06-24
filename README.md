@@ -8,4 +8,4 @@ The colorscheme used is (colorschemes/)gruvbox-material(.c), included using the 
 <img src=.assets/preview.png />
 
 ## TODO
-- [ ] change the default term title from "st" to "~" to make it seem seamless with zsh
+- [x] change the default term title from "st" to "~" to make it seem seamless with zsh
