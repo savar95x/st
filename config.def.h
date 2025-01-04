@@ -126,8 +126,8 @@ static Geometry geometry = CellGeometry;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 15;
+static unsigned int cols = 62;
+static unsigned int rows = 13;
 
 /*
  * Default width and height (including borders!)
